@@ -7,6 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.Region;
+import android.os.CountDownTimer;
 import android.view.Display;
 import android.view.Surface;
 import android.view.SurfaceHolder;
@@ -28,8 +29,11 @@ public class AsteroidView extends View {
 
     private Asteroid asteroid;
     private Context context;
-    private float pos[] = new float[2];
     Random rand = new Random();
+    int translationY = rand.nextInt(height);
+
+    private float[] pos = new float[2];
+
 
 
     public AsteroidView(Context context){
@@ -44,9 +48,9 @@ public class AsteroidView extends View {
 
     @Override
     protected void onDraw(Canvas canvas){
-        int n = rand.nextInt(700);
-        canvas.drawBitmap(asteroid.getImage(), width-250 , n, null);
+        canvas.drawBitmap(asteroid.getImage(), width - 400, pos[0], null);
     }
+
 
 
 

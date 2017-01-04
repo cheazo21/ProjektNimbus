@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -32,6 +33,7 @@ public class MainActivity extends Activity implements SensorEventListener{
     private AsteroidView av;
 
     private float mScreenWidth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

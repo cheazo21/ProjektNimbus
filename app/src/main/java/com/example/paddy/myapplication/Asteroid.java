@@ -7,7 +7,6 @@ import java.util.Random;
 public class Asteroid {
 
     private float x,y;
-    private float speed = -12;
     private Bitmap img;
 
 
@@ -22,15 +21,6 @@ public class Asteroid {
         return img;
     }
 
-
-   public void update() {
-
-        x += speed;
-
-        if (x <= -img.getWidth()) {
-            x = 100;
-        }
-    }
 
     public float getX() {
         return x;
