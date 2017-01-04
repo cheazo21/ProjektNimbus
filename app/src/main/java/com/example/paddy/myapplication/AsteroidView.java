@@ -16,6 +16,7 @@ import android.view.animation.TranslateAnimation;
 
 import java.util.Random;
 import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by Paddy on 08.12.16.
@@ -43,7 +44,8 @@ public class AsteroidView extends View {
 
     @Override
     protected void onDraw(Canvas canvas){
-        canvas.drawBitmap(asteroid.getImage(), width-250 , 0, null);
+        int n = rand.nextInt(700);
+        canvas.drawBitmap(asteroid.getImage(), width-250 , n, null);
     }
 
 
