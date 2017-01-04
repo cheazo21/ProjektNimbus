@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_e2ca199fd6e58f1575ce2f92e399ce17b8458f7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_596fd1420418894763c98cda25e6db6c3bda7b3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_55bbe55ec32f3db667816828c9a749d5638bdcee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_dddbd9309b0da8877dd27079e0a9820ebabe8b0e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_662f806f9943ede3536d818e951ebb902f67bc19/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_3b0d1ba9094b4e99d8cee44d8f939a63c00fc253/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_7520384883b15418f72af327241c4e85df0a3f71/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_52769744ebb0dbb3d3a8f1e5151805457d35def3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_7a4a93938873c18cff82a7746e90f02f29229eb9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_4b068a834bd1b53c6010c19c38ab6c23495264ac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_ed938b299b1850da76a2cd84ff450a816df55056/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="e8516a23177e8bc4414197127fd9ab8f1cc563b7">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_84f191bc931abf05647eca0d5a354eab8605d328/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_ad3daad0318866dd50683b650fc089b6a804f754/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="dad777d6a27fe29c603302a876403c5d24d24121">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b691bb4e4c04e4c0976b1411c3f194284dff107f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_5c92245512cf8e9a8a7002cf3d6962c4371eac02/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_eacfe135dc66c15531c0d620aba12e82f03ba617/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/Users/patrick/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_d0582bd2fc48f2b8812d10877b0998b999232af9/classes.dex" />
+    </item>
+
+</items>
