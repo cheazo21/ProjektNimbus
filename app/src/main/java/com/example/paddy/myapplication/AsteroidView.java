@@ -26,11 +26,16 @@ import java.util.TimerTask;
 public class AsteroidView extends View {
     int width = getContext().getResources().getDisplayMetrics().widthPixels;
     int height = getContext().getResources().getDisplayMetrics().heightPixels;
-
     private Asteroid asteroid;
+    private Background bg;
     private Context context;
+
     Random rand = new Random();
-    int translationY = rand.nextInt(height);
+    //jetzt muss man nur noch den punkt an dem y-festgelegt wird ausgetauscht werden
+ //   int positionY = rand.nextInt(1-height);
+
+
+
 
     private float[] pos = new float[2];
 
@@ -39,16 +44,20 @@ public class AsteroidView extends View {
     public AsteroidView(Context context){
         super (context);
     }
-    public AsteroidView(Context context, Asteroid asteroid){
+    public AsteroidView(Context context, Asteroid asteroid, Background bg){
         super (context);
         this.asteroid = asteroid;
         this.context = context;
+        this.bg = bg;
     }
 
 
     @Override
     protected void onDraw(Canvas canvas){
-        canvas.drawBitmap(asteroid.getImage(), width - 400, pos[0], null);
+        //geht nicht !!! translationy hat keine auswirkung :/ 
+        canvas.drawBitmap(asteroid.getImage(),width-400, 0,null);
+
+        // canvas.drawBitmap(asteroid.getImage(), width - 400, pos[0], null);
     }
 
 

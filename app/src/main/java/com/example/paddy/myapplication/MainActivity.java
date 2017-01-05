@@ -31,6 +31,7 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     private PlaneView pv;
     private AsteroidView av;
+    private AsteroidView av2;
 
     private float mScreenWidth;
 
@@ -49,12 +50,14 @@ public class MainActivity extends Activity implements SensorEventListener{
         fl.setLayoutParams(lp);
 
         pv = new PlaneView(this, new Plane(0, 0,BitmapFactory.decodeResource(getResources(), R.drawable.spaceship)), bgv.getBackgroundModel());
-        av = new AsteroidView(this, new Asteroid(0 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)));
+        av = new AsteroidView(this, new Asteroid(0 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)),bgv.getBackgroundModel());
+        av.setVisibility(View.INVISIBLE);
 
 
         fl.addView(bgv);
         fl.addView(pv);
         fl.addView(av);
+        //fl.addView(av2);
 
 
         setContentView(fl);
@@ -71,6 +74,7 @@ public class MainActivity extends Activity implements SensorEventListener{
            @Override
            public void run() {
                onStartAnimation();
+               av.setVisibility(View.VISIBLE);
                av.postDelayed(this, 5000);
            }
        },5000);
