@@ -9,6 +9,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,8 @@ public class MainActivity extends Activity implements SensorEventListener{
     private PlaneView pv;
     private AsteroidView av;
     private AsteroidView av2;
+    private AsteroidView av3;
+    private AsteroidView av4;
 
     private float mScreenWidth;
 
@@ -39,7 +42,11 @@ public class MainActivity extends Activity implements SensorEventListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    //  Timer();
+
+        Display display = getWindowManager().getDefaultDisplay();
+        int width = display.getWidth();
+        int heigth = display.getHeight();
+        //  Timer();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
 
@@ -50,34 +57,60 @@ public class MainActivity extends Activity implements SensorEventListener{
         fl.setLayoutParams(lp);
 
         pv = new PlaneView(this, new Plane(0, 0,BitmapFactory.decodeResource(getResources(), R.drawable.spaceship)), bgv.getBackgroundModel());
-        av = new AsteroidView(this, new Asteroid(0 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)),bgv.getBackgroundModel());
-        av.setVisibility(View.INVISIBLE);
-
+        av = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av2 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av3 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av4 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
 
         fl.addView(bgv);
         fl.addView(pv);
         fl.addView(av);
-        //fl.addView(av2);
-
-
+        fl.addView(av2);
+        fl.addView(av3);
+        fl.addView(av4);
+        av.setVisibility(View.INVISIBLE);
+        av2.setVisibility(View.INVISIBLE);
+        av3.setVisibility(View.INVISIBLE);
+        av4.setVisibility(View.INVISIBLE);
         setContentView(fl);
+        av.getAsteroid().setY(0);
+        av2.getAsteroid().setY(250);
+        av3.getAsteroid().setY(600);
+        av4.getAsteroid().setY(heigth-50);
 
-
-   /*     new Timer().scheduleAtFixedRate(new TimerTask() {
-            @Override
-            public void run() {
-            }
-        }, 0, 10000);
-*/
 
        av.postDelayed(new Runnable() {
            @Override
            public void run() {
                onStartAnimation();
                av.setVisibility(View.VISIBLE);
-               av.postDelayed(this, 5000);
+               av.postDelayed(this, 5123);
            }
        },5000);
+
+        av2.postDelayed(new Runnable(){
+            public void run(){
+                onStartAnimationTwo();
+                av2.setVisibility(View.VISIBLE);
+                av2.postDelayed(this, 7234);
+            }
+        },7500);
+
+        av3.postDelayed(new Runnable(){
+            public void run(){
+                onStartAnimationThree();
+                av3.setVisibility(View.VISIBLE);
+                av3.postDelayed(this, 10000);
+            }
+        },9998);
+
+        av4.postDelayed(new Runnable(){
+            public void run(){
+                onStartAnimationFour();
+                av4.setVisibility(View.VISIBLE);
+                av4.postDelayed(this, 15000);
+            }
+        },12435);
 
     }
 
@@ -96,11 +129,52 @@ public class MainActivity extends Activity implements SensorEventListener{
         valueAnimator.setDuration(2000);
         valueAnimator.start();
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
-
-
     }
+    public void onStartAnimationTwo(){
 
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(mScreenWidth , -2000);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+            public void onAnimationUpdate(ValueAnimator animation){
+                float value = (float) animation.getAnimatedValue();
+                av2.setTranslationX(value);
+            }
+        });
 
+        valueAnimator.setInterpolator(new LinearInterpolator());
+        valueAnimator.setDuration(2000);
+        valueAnimator.start();
+        valueAnimator.setRepeatMode(ValueAnimator.RESTART);
+    }
+    public void onStartAnimationThree(){
+
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(mScreenWidth , -2000);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+            public void onAnimationUpdate(ValueAnimator animation){
+                float value = (float) animation.getAnimatedValue();
+                av3.setTranslationX(value);
+            }
+        });
+
+        valueAnimator.setInterpolator(new LinearInterpolator());
+        valueAnimator.setDuration(2000);
+        valueAnimator.start();
+        valueAnimator.setRepeatMode(ValueAnimator.RESTART);
+    }
+    public void onStartAnimationFour(){
+
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(mScreenWidth , -2000);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener(){
+            public void onAnimationUpdate(ValueAnimator animation){
+                float value = (float) animation.getAnimatedValue();
+                av4.setTranslationX(value);
+            }
+        });
+
+        valueAnimator.setInterpolator(new LinearInterpolator());
+        valueAnimator.setDuration(2000);
+        valueAnimator.start();
+        valueAnimator.setRepeatMode(ValueAnimator.RESTART);
+    }
     @Override
     protected void onResume() {
         super.onResume();

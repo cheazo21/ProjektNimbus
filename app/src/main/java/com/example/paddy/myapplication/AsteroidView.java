@@ -55,7 +55,7 @@ public class AsteroidView extends View {
     @Override
     protected void onDraw(Canvas canvas){
         //geht nicht !!! translationy hat keine auswirkung :/ 
-        canvas.drawBitmap(asteroid.getImage(),width-400, 0,null);
+        canvas.drawBitmap(asteroid.getImage(), asteroid.getX(), asteroid.getY() ,null);
 
         // canvas.drawBitmap(asteroid.getImage(), width - 400, pos[0], null);
     }

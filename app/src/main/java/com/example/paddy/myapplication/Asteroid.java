@@ -21,6 +21,11 @@ public class Asteroid {
         return img;
     }
 
+    public void setPosition(float[] coords){
+        this.x = coords[0];
+        this.y = coords[1];
+    }
+
 
     public float getX() {
         return x;
