@@ -2,12 +2,12 @@ package com.example.paddy.myapplication;
 
 import android.graphics.Bitmap;
 
-import java.util.Random;
-
 public class Asteroid {
 
     private float x,y;
     private Bitmap img;
+    public float width, height;
+
 
 
 
@@ -15,17 +15,13 @@ public class Asteroid {
         this.x = x;
         this.y = y;
         this.img = img;
+        width = img.getWidth();
+        height = img.getHeight();
     }
 
     public Bitmap getImage() {
         return img;
     }
-
-    public void setPosition(float[] coords){
-        this.x = coords[0];
-        this.y = coords[1];
-    }
-
 
     public float getX() {
         return x;
@@ -33,6 +29,14 @@ public class Asteroid {
 
     public float getY() {
         return y;
+    }
+
+    public float getWidth(){
+        return width;
+    }
+
+    public float getHeight(){
+        return height;
     }
 
     public void setX(int x) {

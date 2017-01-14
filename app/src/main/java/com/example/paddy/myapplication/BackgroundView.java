@@ -7,15 +7,8 @@ import android.graphics.Region;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-
-import com.example.paddy.myapplication.*;
-
-import java.util.ArrayList;
-import java.util.Random;
-
 public class BackgroundView extends SurfaceView implements Runnable {
 
-	Asteroid asteroid;
 	Background bg;
 	Thread renderThread;
 	SurfaceHolder holder;
@@ -24,7 +17,6 @@ public class BackgroundView extends SurfaceView implements Runnable {
 	public BackgroundView(Context context) {
 		super(context);
 		this.bg = new Background(BitmapFactory.decodeResource(getResources(), R.drawable.background_space));
-		//this.asteroid = new Asteroid(BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03));
 		this.holder = getHolder();
 	}
 
@@ -50,17 +42,9 @@ public class BackgroundView extends SurfaceView implements Runnable {
 						canvas.drawBitmap(bg.getBitmap(), bg.getX(),0, null);
 					if (bg.getX()+bg.getBitmap().getWidth()+bg.getBitmap().getWidth() >= 0 || (bg.getX()+bg.getBitmap().getWidth() >= 0 && bg.getX() <= getWidth()))
 						canvas.drawBitmap(bg.getBitmap(), (bg.getX()+bg.getBitmap().getWidth()),0, null);
-					//synchronized (asteroid){
-						//Lässt den Asteroid springen
-						//Random rand = new Random();
-						//int n = rand.nextInt(600);
-						//canvas.drawBitmap(asteroid.getImage(), (bg.getX() + bg.getBitmap().getWidth()), 300, null);
-						//canvas.drawBitmap(asteroid.getImage(), (bg.getX() + bg.getBitmap().getWidth()), n, null);
 
-					// }
 					if (getDeltaTime(startTime) > 0.1) {
 						bg.update();
-						//asteroid.update();
 						startTime = System.nanoTime();
 					}
 

@@ -18,9 +18,6 @@ import android.view.animation.LinearInterpolator;
 import android.widget.FrameLayout;
 
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 
 public class MainActivity extends Activity implements SensorEventListener{
 
@@ -42,11 +39,10 @@ public class MainActivity extends Activity implements SensorEventListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Display display = getWindowManager().getDefaultDisplay();
         int width = display.getWidth();
         int heigth = display.getHeight();
-        //  Timer();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
 
@@ -57,10 +53,10 @@ public class MainActivity extends Activity implements SensorEventListener{
         fl.setLayoutParams(lp);
 
         pv = new PlaneView(this, new Plane(0, 0,BitmapFactory.decodeResource(getResources(), R.drawable.spaceship)), bgv.getBackgroundModel());
-        av = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
-        av2 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
-        av3 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
-        av4 = new AsteroidView(this, new Asteroid(width-300 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av = new AsteroidView(this, new Asteroid(width-200 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av2 = new AsteroidView(this, new Asteroid(width-200 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av3 = new AsteroidView(this, new Asteroid(width-200 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
+        av4 = new AsteroidView(this, new Asteroid(width-200 , 0, BitmapFactory.decodeResource(getResources(), R.drawable.asteroid_03)), bgv.getBackgroundModel());
 
         fl.addView(bgv);
         fl.addView(pv);
@@ -76,9 +72,9 @@ public class MainActivity extends Activity implements SensorEventListener{
         av.getAsteroid().setY(0);
         av2.getAsteroid().setY(250);
         av3.getAsteroid().setY(600);
-        av4.getAsteroid().setY(heigth-50);
+        av4.getAsteroid().setY(heigth-250);
 
-
+        //Timer für die verschiedenen AteroidViews
        av.postDelayed(new Runnable() {
            @Override
            public void run() {
@@ -111,6 +107,9 @@ public class MainActivity extends Activity implements SensorEventListener{
                 av4.postDelayed(this, 15000);
             }
         },12435);
+
+
+
 
     }
 
@@ -175,6 +174,7 @@ public class MainActivity extends Activity implements SensorEventListener{
         valueAnimator.start();
         valueAnimator.setRepeatMode(ValueAnimator.RESTART);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -210,7 +210,7 @@ public class MainActivity extends Activity implements SensorEventListener{
     }
 
 
-
+    //Steuerung via Neigungssensoren
     @Override
     public void onSensorChanged(SensorEvent event) {
 
@@ -244,8 +244,6 @@ public class MainActivity extends Activity implements SensorEventListener{
             pv.getPlane().setPosition(coords);
             pv.invalidate();
 
-           // av.getAsteroid().setPosition(pos);
-           // av.invalidate();
         }
     }
 

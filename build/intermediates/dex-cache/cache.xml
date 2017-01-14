@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="5bbcf93183df36455a9d97ea0a4c3cc8e699656e">
+        sha1="fd60f952985dcf2f719f865c34c50d9c1145d4c1">
         <dex dex="/Users/Paddy/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9b973b2f618173189624b6302c73c9a1ae533af2/classes.dex" />
     </item>
     <item
@@ -88,7 +88,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="c0a9a092ca03cbb74f4108faff92b9761a2b947a">
+        sha1="7b4a27d3e11a4b6e9c351a4c7ba93664911cb07d">
         <dex dex="/Users/Paddy/Dropbox/Studium/Android workspace/ProjektNimbus/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cb91b956cb7ee03c82927e6d6d522cfd41e044c6/classes.dex" />
     </item>
     <item

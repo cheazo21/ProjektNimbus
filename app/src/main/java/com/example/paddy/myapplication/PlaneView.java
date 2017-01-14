@@ -12,13 +12,14 @@ import com.example.paddy.myapplication.*;
 
 public class PlaneView extends View {
 
+	long startTime = System.nanoTime();
 	private Plane plane;
+	private Asteroid asteroid;
 	private Background bg;
-	private Asteroid as;
 	private Paint paint;
 	private Rect rect;
 	private final String textLabel = "Speed: ";
-	private final String pointsLabel = "Points";
+	private final String pointsLabel = "Points: ";
 	private Context context;
 
 	private float[] coords = new float[2];
@@ -35,6 +36,7 @@ public class PlaneView extends View {
 		this.plane = plane;
 		this.bg = bg;
 		this.context = context;
+
 	}
 
 	@Override
@@ -43,6 +45,7 @@ public class PlaneView extends View {
 		canvas.drawBitmap(plane.getImage(), coords[0], coords[1], null);
 
 		String speedText = ""+(-bg.getSpeed()*23);
+		String pointsText = ""+ String.format("%.2f", getDeltaTime(startTime));
 		int fontSize = context.getResources().getDimensionPixelSize(R.dimen.speedFontSize);
 		Paint paint = getPaint(fontSize);
 		paint.getTextBounds(textLabel, 0, speedText.length(), rect);
@@ -59,6 +62,14 @@ public class PlaneView extends View {
 		paint.getTextBounds(textLabel, 0, textLabel.length(), rect);
 		canvas.drawText(textLabel, (speedXCoordinate-rect.width()-labelPadding), yOffset, paint);
 		canvas.drawText(speedText, speedXCoordinate, yOffset, paint);
+
+		canvas.drawText(pointsLabel, 0, 100, paint);
+		canvas.drawText(pointsText, 300 , 100, paint);
+
+		//CollisionDetection not ready yet!
+		//if(plane.collidesWith(asteroid)){
+		//	canvas.drawText("Collision!",0,300,paint);
+		//}
 	}
 
 
@@ -105,4 +116,9 @@ public class PlaneView extends View {
 			coords[1] = yPlane;
 
 	}
+	private float getDeltaTime(long startTime) {
+		return (System.nanoTime() - startTime) / 100000000f;
+	}
+
+
 }
